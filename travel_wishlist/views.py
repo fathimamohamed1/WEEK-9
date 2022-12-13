@@ -71,7 +71,7 @@ def place_details(request,place_pk):
         else:
             return render (request,'travel_wishlist/place_detail.html',{'place':place})
 
-
+#Added delete function to allow users to delete a place
 @login_required
 def delete_place(request,place_pk):
     place =get_object_or_404(Place, pk=place_pk)
